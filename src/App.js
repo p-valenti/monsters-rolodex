@@ -1,6 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
 import {Component} from "react";
+import cardList from "./components/card-list/card-list.component";
+import './App.css';
 
 class App extends Component {
     constructor() {
@@ -56,8 +56,8 @@ class App extends Component {
                             <h1>{monster.name}</h1>
                         </div>
                     );
-                })
-                }
+                })}
+                <cardList />
             </div>
         );
     }

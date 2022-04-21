@@ -8,7 +8,13 @@ const App = () => {
     const [monsters, setMonsters] = useState([]);
 
     console.log('render');
-
+    useEffect(()=> {
+        fetch('https://jsonplaceholder.typicode.com/users')
+            .then((response) => response.json())
+            .then((users) =>
+                setMonsters(users)
+            );
+    }, [])
 
 
     const onSearchChange = (event) => {
